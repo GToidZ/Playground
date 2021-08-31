@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Mitr:wght@400;600&display=swap');
+
+div.centered {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+div.inner-centered {
+    display: flex;
+    justify-content: center;
+}
+
+.unselectable {
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    user-select: none;
+}
+
+img {
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    user-drag: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+div.profile-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    box-sizing: border-box;
+    margin: 0px -20px;
+
+    background-image: linear-gradient(to left top, #48d1cc, #5fcef7, #adc2ff, #e8b7e7, #ffb6c1);
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+    transition: all 0.3s ease-in-out;
+    font-family: 'Mitr', sans-serif;
+}
+
+div.profile-container::after{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    border-radius: 16px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: opacity 0.3s ease-in-out;
+}
+
+div.profile-container:hover{
+    transform: scale(1.1, 1.1);
+}
+
+div.profile-container:hover::after{
+    opacity: 1;
+}
+
+div.profile-container div.item {
+    box-sizing: border-box;
+    width: 50%;
+    margin-bottom: 20px;
+    padding: 0px 20px;
+}
+
+.left {
+    text-align: left;
+}
+
+.right {
+    text-align: right;
+}
+
+span.character-name {
+    font-size: 24px;
+    font-weight: 600;
+    color: fefefe;
+}
+
+span.divider {
+    width: 100%;
+    height: 1px;
+    display: block;
+    position: relative;
+    margin-bottom: 0;
+    padding: 1px 0;
+    background: linear-gradient(to right, transparent, white, transparent);
+}
+
+div.info {
+    color: #fefefe;
+    font-weight: 400;
+    font-size: 16px;
+    margin-left: 16%;
+}
+
+div.info span.heading {
+    font-style: italic;
+    font-weight: 600;
+    font-size: 12px;
+    margin-left: -16%;
+}
+
+span.notice {
+    font-size: 10px;
+    font-style: italic;
+    color: #fefefe;
+    bottom: 0px;
+}
